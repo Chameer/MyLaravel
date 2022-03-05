@@ -1,2 +1,13 @@
 Laravel Dev Notes
 =====================
+#Creating Laravel App:
+composer create-project laravel/laravel my-app
+
+#Run the app on local development server:
+php artisan serve
+
+
+
+
+Ref:
+https://www.twilio.com/blog/building-and-consuming-a-restful-api-in-laravel-php
