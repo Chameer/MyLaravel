@@ -10,6 +10,7 @@ php artisan serve
 
 
 Ref:
+https://codelapan.com/post/how-to-create-a-crud-rest-api-in-laravel-8-with-sanctum    //recommended
 https://www.twilio.com/blog/building-and-consuming-a-restful-api-in-laravel-php
 https://dev.to/kingsconsult/how-to-create-a-secure-crud-restful-api-in-laravel-8-and-7-using-laravel-passport-31fh    //good
 
