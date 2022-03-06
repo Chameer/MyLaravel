@@ -12,6 +12,69 @@ Ref:  https://dev.to/kingsconsult/how-to-create-a-secure-crud-restful-api-in-lar
 #cmd
 composer require laravel/passport
 
+#specify the default string length
+go,
+app/Providers/AppServiceProvider.php
+//then update the boot function
+
+Schema::defaultstringLength(191);
+
+//add the below statement to top of the class
+use Illuminate\Support\Facades\Schema;
+
+//then, run the migration cmd
+php artisan migrate
+
+#STEP :  Create the encryption keys
+//We need to create the encryption keys that are needed to generate our secure access tokens.
+//This command will also create "personal access" and "password grant" clients which will be used to generate access tokens.
+
+php artisan passport:install
+
+
+#STEP : Add the HasApiTokens trait to our user model
+//Go to App\Models\User.php and tell the User class to :
+
+use Laravel\Passport\HasApiTokens;
+
+//default (need no to do if it added automatically) >>  use Laravel\Sanctum\HasApiTokens;
+
+#STEP:
+//Call the passport routes in AuthServiceProvider
+//Go to App/Providers/AuthServiceProvider.php and add  to boot method
+Passport::routes();
+
+//To the boot method, also add the path before the class at the top
+
+    use Laravel\Passport\Passport;
+//Uncomment the policy in the protected method of $policies
+
+#STEP:
+Set the driver
+//This will be the final step in the setting up and configuration of Laravel\Passport, we going to change our api driver from the default token to passport.
+Go to config\auth.php and locate the guards array. In the api key, change the driver from token to passport 
+
+//**
+    'guards' => [
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+
+        'api' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+            'hash'=>false,
+        ],
+    ],
+
+//**
+
+#Creating migration files for the project  (our end)
+
+
+
+
 
 
 ------------------------------------------------------------------------------------------------------------------
