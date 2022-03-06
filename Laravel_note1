@@ -6,9 +6,15 @@ composer create-project laravel/laravel my-app
 #Run the app on local development server:
 php artisan serve
 
+API DEVELOPMENT WITH PASSPORT
+------------------------------
+Ref:  https://dev.to/kingsconsult/how-to-create-a-secure-crud-restful-api-in-laravel-8-and-7-using-laravel-passport-31fh
+#cmd
+composer require laravel/passport
 
 
 
+------------------------------------------------------------------------------------------------------------------
 Ref:
 https://codelapan.com/post/how-to-create-a-crud-rest-api-in-laravel-8-with-sanctum    //recommended
 https://www.twilio.com/blog/building-and-consuming-a-restful-api-in-laravel-php
