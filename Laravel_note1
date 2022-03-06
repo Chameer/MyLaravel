@@ -11,3 +11,6 @@ php artisan serve
 
 Ref:
 https://www.twilio.com/blog/building-and-consuming-a-restful-api-in-laravel-php
+https://dev.to/kingsconsult/how-to-create-a-secure-crud-restful-api-in-laravel-8-and-7-using-laravel-passport-31fh    //good
+
+https://laravel.com/docs/9.x/sanctum
