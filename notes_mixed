@@ -4,3 +4,7 @@ code
 https://github.com/parzibyte/sistema_ventas_laravel/
 
 https://www.itsolutionstuff.com/post/laravel-shopping-add-to-cart-with-ajax-exampleexample.html
+
+
+//##
+php artisan make:controller PhotoController --resource
