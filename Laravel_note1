@@ -74,6 +74,10 @@ Go to config\auth.php and locate the guards array. In the api key, change the dr
 
 
 
+$results = DB::select('select * from users where id = ?', [1]);
+
+
+
 
 
 
